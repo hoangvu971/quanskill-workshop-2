@@ -1,0 +1,64 @@
+market_research_task:
+  description: >
+    Conduct comprehensive market research on {topic}. Include:
+    - Current market trends and opportunities
+    - Top 3-5 competitor analysis (content gaps and successful strategies)
+    - Target audience insights and pain points
+    - Trending keywords and search volume data
+    - Content performance benchmarks in this space
+  expected_output: "A detailed market research report with competitor insights, audience analysis, and trending topics"
+  agent: market_research_agent
+  
+content_ideation_task:
+  description: >
+    Based on the market research, generate 5-7 unique content ideas and angles for {topic}. Include:
+    - Content titles/headlines
+    - Unique angles or perspectives
+    - Target audience for each idea
+    - Content format recommendations (blog, social, video)
+    - Key messaging points
+  expected_output: "A list of 5-7 content ideas with unique angles, target audiences, and format recommendations"
+  agent: content_ideation_agent
+  context:
+    - market_research_task
+    
+blog_writing_task:
+  description: >
+    Select the most promising content idea and write a complete blog post (800-1200 words). Include:
+    - Compelling headline and introduction
+    - Well-structured body with subheadings
+    - Actionable insights and tips
+    - SEO-optimized content with relevant keywords
+    - Strong call-to-action
+  expected_output: "A complete, SEO-optimized blog post ready for publication"
+  agent: blog_writer_agent
+  context:
+    - market_research_task
+    - content_ideation_task
+    
+social_media_task:
+  description: >
+    Create social media content to promote the blog post across different platforms:
+    - 3 Facebook posts (community-focused, storytelling, shareable content)
+    - 5 Instagram posts (visual storytelling, behind-the-scenes, carousel ideas)
+    - 3 YouTube community posts/video descriptions (educational hooks, value-driven)
+    - Include relevant hashtags and engagement strategies for each platform
+    - Platform-specific formatting and best practices
+  expected_output: "Platform-specific social media posts with hashtags and engagement strategies for Facebook, Instagram, and YouTube"
+  agent: social_media_agent
+  context:
+    - blog_writing_task
+    - content_ideation_task
+    
+script_writing_task:
+  description: >
+    Write 3 short-form video scripts (30-60 seconds each) based on key insights from the blog:
+    - Script 1: Hook-focused educational content
+    - Script 2: Problem/solution format
+    - Script 3: Behind-the-scenes or personal angle
+    Include timing cues, visual suggestions, and platform-specific adaptations
+  expected_output: "Three complete video scripts with timing cues and visual directions"
+  agent: script_writer_agent
+  context:
+    - blog_writing_task
+    - content_ideation_task

@@ -1,0 +1,105 @@
+market_research_task:
+  description: |
+    Conduct market research for {product_name} in the {industry} industry targeting {target_audience} within {location}.
+    Product Description: {product_description}
+
+    Research Requirements:
+    1. Market Analysis: Current trends, size, and growth in {industry}
+    2. Competitor Analysis: Top 5 competitors and their positioning
+    3. Target Audience: {target_audience} demographics, pain points, and behavior
+    4. Keywords: Trending search terms and opportunities
+    5. Market Opportunities: Underserved segments and trends
+  expected_output: |
+    Market research report with trends, competitor analysis, audience insights, 
+    keywords, and market projections in markdown format.
+    Save findings to 'resources/research/market_analysis.md'
+
+marketing_strategy_task:
+  description: |
+    Develop marketing strategy for {product_name} with {budget} budget targeting {target_audience}.
+    Product Description: {product_description}
+    Campaign Duration: {campaign_duration}
+    Primary Goal: {primary_goal}
+
+    Strategy Components:
+    1. Value proposition and brand positioning
+    2. Messaging framework for {target_audience}
+    3. Channel strategy and budget allocation
+    4. {primary_goal} campaign objectives for {campaign_duration}
+    5. Competitive differentiation
+  expected_output: |
+    Marketing strategy with positioning, messaging, channels, objectives, 
+    and differentiation in markdown format.
+    Save to 'resources/strategy/marketing_strategy.md'
+
+content_calendar_task:
+  description: |
+    Create {campaign_duration} content calendar for {product_name} starting {current_date}.
+    Align with marketing strategy for {target_audience} in {industry}.
+    Primary Goal: {primary_goal}
+    Budget Consideration: {budget}
+
+    Calendar should include topics, formats, and publishing schedule.
+  expected_output: |
+    Weekly content calendar with topics, formats, schedule, and key themes. Format should be table.
+    Save to 'resources/calendar/content_calendar.md'
+
+content_drafting_blogs_task:
+  description: |
+    Create blog posts (1000-1500 words each) for {product_name} targeting {target_audience}.
+    Product Description: {product_description}
+    Focus on {primary_goal} with compelling headlines and CTAs.
+
+    Suggested topics:
+    - How {product_name} transforms {industry} operations
+    - ROI guide for {target_audience}
+  expected_output: |
+    Blog posts with headlines, structured content, and CTAs in markdown format.
+    Save to 'resources/content/blog_drafts.md'
+
+content_drafting_social_task:
+  description: |
+    Create social media content for {product_name} targeting {target_audience}:
+    Product Description: {product_description}
+    Primary Goal: {primary_goal}
+
+    - LinkedIn posts (professional tone)
+    - Facebook posts (tips and insights) 
+    - Instagram posts (visual focus)
+    Include hashtags, engagement hooks, and CTAs.
+  expected_output: |
+    Platform-specific social posts with hashtags and engagement strategies in markdown format.
+    Save to 'resources/content/social_media_drafts.md'
+
+seo_optimization_task:
+  description: |
+    SEO optimize blog posts for {product_name} in {industry}:
+    Target Audience: {target_audience}
+    Location: {location}
+    Primary Goal: {primary_goal}
+
+    1. Keyword research and mapping
+    2. Meta titles and descriptions
+    3. Content structure optimization
+    4. Internal linking strategy
+    5. Technical SEO recommendations
+  expected_output: |
+    SEO-optimized content with keywords, meta tags, and recommendations in markdown format.
+    Save to 'resources/content/seo_optimized_blogs.md'
+
+script_generation_task:
+  description: |
+    Create short video scripts (30-60 seconds) for {product_name}:
+    Product Description: {product_description}
+    Target Audience: {target_audience}
+    Primary Goal: {primary_goal}
+
+    1. Educational hook script
+    2. Problem/solution script
+    3. Before/after transformation
+    4. Tips and tricks
+    5. Success story
+    Include platform adaptations, visual cues, and hashtags.
+  expected_output: |
+    Five video scripts with platform adaptations, visuals, and engagement elements in markdown format.
+    Save to 'resources/content/video_scripts.md'
